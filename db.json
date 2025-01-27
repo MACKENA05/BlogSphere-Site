@@ -1,0 +1,26 @@
+{
+    "blogs": [
+      {
+        "id": 1,
+        "title": "Understanding React Hooks",
+        "author": "John Doe",
+        "content": "React hooks are a powerful addition to React...",
+        "comments": [
+          { "id": 1, "author": "Jane", "text": "Great article!" }
+        ]
+      },
+
+      {
+        "id": 1,
+        "title": "Learning React",
+        "author": "Jane Smith",
+        "content": "React is a JavaScript library for building user interfaces...",
+        "comments": [
+          { "id": 1, "author": "Mark", "text": "Very informative!" }
+        ]
+      }
+    ]
+    
+      
+  }
+  
