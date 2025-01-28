@@ -21,13 +21,12 @@ function BlogPost() {
 
   if (!blog) return <div>Loading....</div>;
 
-  // The image URL will now be relative to the public folder
-  const imageUrl = `/Images/${blog.image}`;
-
+  
   return (
      <div>
         <h1>{blog.title}</h1>
-        <h2>{blog.auther}</h2>
+        <h3>{blog.auther}</h3>
+        <img src={blog.image} alt={blog.title} />
         <p>By: {blog.content}</p>
         <CommentSection blogId={blog.id} comment= {blog.comment} />
         <button onClick={handleDelete}>Delete Post</button>
