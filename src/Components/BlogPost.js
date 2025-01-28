@@ -25,17 +25,16 @@ function BlogPost() {
   const imageUrl = `/Images/${blog.image}`;
 
   return (
-    <div>
+     <div>
         <h1>{blog.title}</h1>
         <h2>{blog.auther}</h2>
         <p>By: {blog.content}</p>
-
+        <CommentSection blogId={blog.id} comment= {blog.comment} />
+        <button onClick={handleDelete}>Delete Post</button>
     </div>
-  )
-
-
-
-
+  );
 
 }
+
+
 
