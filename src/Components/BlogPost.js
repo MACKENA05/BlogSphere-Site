@@ -23,7 +23,7 @@ function BlogPost() {
 
   
   return (
-     <div>
+    <div>
         <h1>{blog.title}</h1>
         <h3>{blog.auther}</h3>
         <img src={blog.image} alt={blog.title} />
@@ -32,8 +32,9 @@ function BlogPost() {
         <button onClick={handleDelete}>Delete Post</button>
     </div>
   );
-
 }
+
+export default BlogPost;
 
 
 
