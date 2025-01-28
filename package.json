@@ -5,15 +5,14 @@
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-scripts": "5.0.1"
+    "react-dom": "^19.0.0"
   },
   "scripts": {
     "start": "concurrently \"npm run server\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server" : "json-server --watch db.json --port 3001"
+    "server": "json-server --watch db.json --port 3001"
   },
   "eslintConfig": {
     "extends": [
@@ -32,5 +31,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "json-server": "^1.0.0-beta.3",
+    "react-scripts": "^5.0.1"
   }
 }
