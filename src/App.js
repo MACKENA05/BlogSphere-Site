@@ -9,8 +9,10 @@ import { useEffect,useState } from'react';
 
 
 function App() {
+   //initialize state
      const [blogs, setBlogs] = useState([]);
     
+     // Fetch initial blog data from API
       useEffect(() => {
         fetch('http://localhost:3001/blogs')
           .then((res) => res.json())
