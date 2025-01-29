@@ -1,28 +1,18 @@
 import React from 'react'
-import logo from './Logo.png'
+import { Link } from 'react-router-dom'
 import '../App.css'
 
 const NavBar = () => {
   return (
-    <>
-    <div className='navbar'>
-      <div className='logo'>
-        <img src={logo}/>
+    <nav className='navbar'>
+      <img src={logo} alt='logo' className='nav-logo' />
+      <div className='nav-links'>
+        <Link to='./blogs'>Blogs</Link>
       </div>
-      <div> 
-        <h2>blogs</h2>
-        </div>
-        <div>
-            <button>Add Post</button>
-        </div>
-
-        
-    </div>
-    <div className='landing-page'>
-    <h1>Latest Posts</h1>
-    <p>Stay updated with the latest tech news. <br/>Discover a world of ideas and insights with our latest blog posts, crafted to inspire, inform, and spark meaningful conversations.</p>
-</div>
-</>
+      <Link to='./newpost'>
+        <button className='add-post-btn'>Add Post</button>
+      </Link>
+    </nav>
   )
 }
 
