@@ -1,18 +1,16 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NavBar from './Components/NavBar';
+// import NavBar from './Components/NavBar';
 import BlogList from './Components/BlogList';
 import BlogPost from './Components/BlogPost';
-import NewPostForm from './Components/NewPostForm';
+// import NewPostForm from './Components/NewPostForm';
 import Error from './Error';
 import { useEffect,useState } from'react';
 
 
 function App() {
-   //initialize state
      const [blogs, setBlogs] = useState([]);
     
-     // Fetch initial blog data from API
       useEffect(() => {
         fetch('http://localhost:3001/blogs')
           .then((res) => res.json())
@@ -20,18 +18,18 @@ function App() {
       }, []);
 
      // Handle new post addition
-     const handleNewBlogs = (newPosts) => {
-        setBlogs(prevBlogs => [newPosts, ...prevBlogs]); // Functional update
-      };
+   //   const handleNewBlogs = (newPosts) => {
+   //      setBlogs(prevBlogs => [newPosts, ...prevBlogs]); // Functional update
+   //    };
 
 
   return (
     <Router>
-      <NavBar />
+      {/* <NavBar /> */}
       <Routes>
         <Route path="/blogs" element={<BlogList blogs={blogs} setBlogs={setBlogs} />} />
         <Route path="/blogs/:id" element={<BlogPost />} />
-        <Route path="/new-post" element={<NewPostForm addPost={handleNewBlogs} setBlogs={setBlogs}/>} />
+        {/* <Route path="/new-post" element={<NewPostForm addPost={handleNewBlogs} setBlogs={setBlogs}/>} /> */}
         <Route path="*" element={<Error/>} />
       </Routes>
     </Router>
