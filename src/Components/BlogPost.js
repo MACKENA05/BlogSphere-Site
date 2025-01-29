@@ -20,8 +20,7 @@ const BlogPost = () => {
       <img src={blog.image} alt={`Image of ${blog.title}`} /> 
       <div className="blog-post-full">
         <div className="blog-post-image">
-          <img src="https://i.pinimg.com/736x/92/d2/6e/92d26e4d3b0f31d90072e8c626a8d629.jpg" alt="default" />
-        </div>
+      </div>
         <div className="blog-post-details">
           <h2>{blog.title}</h2>
           <p>By: {blog.author}</p>
