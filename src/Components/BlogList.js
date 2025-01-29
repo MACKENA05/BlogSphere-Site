@@ -1,4 +1,3 @@
-import {useState,useEffect} from 'react'
 import BlogPost from './BlogPost'
 
 function BlogList({blogs,setBlogs}){
@@ -9,7 +8,7 @@ function BlogList({blogs,setBlogs}){
       ) : (
         blogs.map((blog) => (
           <div key={blog.id}>
-            <BlogPost blog={blog} /> 
+            <BlogPost blog={blog} setBlogs={setBlogs} /> 
           </div>
         ))
       )}
