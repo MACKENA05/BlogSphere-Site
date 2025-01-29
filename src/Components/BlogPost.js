@@ -1,36 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import CommentSection from './CommentSection';
+import '../App.css';
 
-function BlogPost() {
+const BlogPost = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/blogs/${id}`)
+    fetch(`http://localhost:30001/blogs/$id}`)
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, [id]);
 
-  const handleDelete = () => {
-    fetch(`http://localhost:3001/blogs/${id}`, { method: 'DELETE' })
-      .then(() => {
-        window.location.href = '/blogs'; 
-      });
-  };
-
-  if (!blog) return <div>Loading...</div>;
+  if (!blog) return <p>Loading...</p>;
 
   return (
-    <div>
-      <h1>{blog.title}</h1>
-      <h3>By {blog.author}</h3>
-      <img src={blog.image} alt={blog.title} />
-      <p>{blog.content}</p>
-      <CommentSection blogId={blog.id} comments={blog.comments} />
-      <button onClick={handleDelete}>Delete Post</button>
-    </div>
+    <>
+      <img src={blog.image} alt={`Image of ${blog.title}`} /> {/* Corrected alt attribute */}
+      <div className="blog-post-full">
+        <div className="blog-post-image">
+          <img src="https://i.pinimg.com/736x/92/d2/6e/92d26e4d3b0f31d90072e8c626a8d629.jpg" alt="default" />
+        </div>
+        <div className="blog-post-details">
+          <h2>{blog.title}</h2>
+          <p>By: {blog.author}</p>
+          <p>{blog.content}</p>
+          <CommentSection blogId={blog.id} comments={blog.comments} />
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 export default BlogPost;
