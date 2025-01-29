@@ -15,7 +15,7 @@ function BlogPost() {
   const handleDelete = () => {
     fetch(`http://localhost:3001/blogs/${id}`, { method: 'DELETE' })
       .then(() => {
-        window.location.href = '/blogs'; // Redirect to blog list after deletion
+        window.location.href = '/blogs'; 
       });
   };
 
