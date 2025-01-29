@@ -4,7 +4,7 @@ import NavBar from './Components/NavBar';
 import BlogList from './Components/BlogList';
 import BlogPost from './Components/BlogPost';
 import NewPostForm from './Components/NewPostForm';
-import Error from './error';
+import Error from './Error';
 import { useEffect,useState } from'react';
 
 
