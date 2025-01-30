@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BlogList from './Components/BlogList';
 import BlogPost from './Components/BlogPost';
 // import NewPostForm from './Components/NewPostForm';
+import Footer from './Components/Footer';
 import Error from './Error';
 import { useEffect,useState } from'react';
 
@@ -27,11 +28,13 @@ function App() {
     <Router>
       {/* <NavBar /> */}
       <Routes>
+        <Route path="/" element={<BlogList blogs={blogs} setBlogs={setBlogs} />} />
         <Route path="/blogs" element={<BlogList blogs={blogs} setBlogs={setBlogs} />} />
         <Route path="/blogs/:id" element={<BlogPost />} />
         {/* <Route path="/new-post" element={<NewPostForm addPost={handleNewBlogs} setBlogs={setBlogs}/>} /> */}
         <Route path="*" element={<Error/>} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
