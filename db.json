@@ -240,11 +240,6 @@
           "id": 1,
           "author": "Daniel",
           "text": "These new features are super handy!"
-        },
-        {
-          "id": 2,
-          "author": "Monicah",
-          "text": "superb"
         }
       ]
     },
@@ -273,6 +268,20 @@
           "id": 1,
           "author": "Olivia",
           "text": "Bootstrap has made responsive design so easy!"
+        }
+      ]
+    },
+    {
+      "id": "919e",
+      "title": "Getting Started with Docker",
+      "content": "Docker is a tool that allows developers to easily deploy applications in containers. Learn how to use Docker to containerize your applications.\"",
+      "author": "Emily Dawson",
+      "image": "",
+      "comments": [
+        {
+          "id": 1,
+          "author": "Monicah Mackena",
+          "text": "Docker is a game changer for development workflows"
         }
       ]
     }
