@@ -8,7 +8,7 @@ const BlogPost = () => {
   const [blog, setBlog] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/blogs/${id}`) 
+    fetch(`http://localhost:3001/blogs/${id}`)
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, [id]);
@@ -16,19 +16,24 @@ const BlogPost = () => {
   if (!blog) return <p>Loading...</p>;
 
   return (
-    <> 
+    <div className="blog-post-container">
       <div className="blog-post-full">
         <div className="blog-post-image">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt={blog.title} />
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+            alt={blog.title}
+          />
         </div>
         <div className="blog-post-details">
-          <h2>{blog.title}</h2>
-          <p>By: {blog.author}</p>
-          <p>{blog.content}</p>
+          <h2 className="blog-post-title">{blog.title}</h2>
+          <p className="blog-post-author">By: {blog.author}</p>
+          <div className="blog-post-content">
+            <p>{blog.content}</p>
+          </div>
           <CommentSection blogId={blog.id} comments={blog.comments} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

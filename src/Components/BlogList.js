@@ -60,7 +60,7 @@ const BlogList = ({ blogs, setBlogs }) => {
               <img src={blog.image || 'https://via.placeholder.com/150'} alt={blog.title} />
               <p>{blog.content.substring(0, 100)}...</p>
             </Link>
-            <button onClick={() => handleDelete(blog.id)} disabled={isDeleting}>
+            <button className='delete-button' onClick={() => handleDelete(blog.id)} disabled={isDeleting}>
               {isDeleting ? "Deleting..." : "Delete Post"}
             </button>
           </div>
