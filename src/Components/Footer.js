@@ -11,7 +11,6 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-content">
-          {/* Back to Top button */}
           <button onClick={scrollToTop} className="btn-footer">Back to top</button>
           
           <p className="footer-text">Copyright &copy; 2025 My Website. All rights reserved.</p>

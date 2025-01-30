@@ -39,6 +39,11 @@
           "id": 1,
           "author": "Sara",
           "text": "Great comparison between Grid and Flexbox!"
+        },
+        {
+          "id": 2,
+          "author": "Monicah ",
+          "text": "nice"
         }
       ]
     },

@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import '../App.css'
 
 const NewPostForm = ({addPost,setBlogs }) => {
-  const navigate = useNavigate();
   const [newPost, setNewPost] = useState({
     title: "",
     content: "",
@@ -72,7 +70,7 @@ const NewPostForm = ({addPost,setBlogs }) => {
             placeholder="Image URL"
             value={newPost.image}
             onChange={(e) => setNewPost({ ...newPost, image: e.target.value })}
-            pattern="https?://.*" // This regex ensures the input is a valid URL starting with http:// or https://
+            pattern="https?://.*" 
             title="Please enter a valid URL starting with http:// or https://"
           />
         </label>
