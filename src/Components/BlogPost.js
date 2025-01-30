@@ -8,7 +8,7 @@ const BlogPost = () => {
   const [blog, setBlog] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:30001/blogs/$id}`)
+    fetch(`http://localhost:3001/blogs/${id}`) 
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, [id]);
@@ -17,10 +17,11 @@ const BlogPost = () => {
 
   return (
     <>
-      <img src={blog.image} alt={`Image of ${blog.title}`} /> 
+      <img src={blog.image} alt={blog.title} /> 
       <div className="blog-post-full">
         <div className="blog-post-image">
-      </div>
+          
+        </div>
         <div className="blog-post-details">
           <h2>{blog.title}</h2>
           <p>By: {blog.author}</p>
