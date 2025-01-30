@@ -70,7 +70,7 @@ npm start
 
 ## Project Structure
 
-````
+```
 blog-platform/
 ├── public/
 │   └── db.json
@@ -83,16 +83,16 @@ blog-platform/
 │   │   └── CommentSection.js
 │   ├── App.js
 │   └── App.css
-````
+```
 
 ## API Endpoints
 
-| Endpoint | Method | Description    |
-|-----------|--------|-----------------|
-| /blogs   | GET    | Fetch all posts |
-| /blogs    | POST   | Create new post|
-|/blogs/:id |PATCH   | Update post comments |
-|/blogs/:id |DELETE  | Remove post     |
+| Endpoint   | Method | Description          |
+| ---------- | ------ | -------------------- |
+| /blogs     | GET    | Fetch all posts      |
+| /blogs     | POST   | Create new post      |
+| /blogs/:id | PATCH  | Update post comments |
+| /blogs/:id | DELETE | Remove post          |
 
 ## Data Structure
 
@@ -117,39 +117,39 @@ blog-platform/
 ```javascript
 const [blogs, setBlogs] = useState([]);
 const [newPost, setNewPost] = useState({
-  title: '',
-  content: '',
-  author: '',
-  image: ''
+  title: "",
+  content: "",
+  author: "",
+  image: "",
 });
 
 // Fetch Posts
 useEffect(() => {
-  fetch('http://localhost:3001/blogs')
-    .then(res => res.json())
-    .then(data => setBlogs(data));
+  fetch("http://localhost:3001/blogs")
+    .then((res) => res.json())
+    .then((data) => setBlogs(data));
 }, []);
 
 // Add New Post
 const addPost = (post) => {
-  fetch('http://localhost:3001/blogs', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(post)
+  fetch("http://localhost:3001/blogs", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(post),
   })
-  .then(res => res.json())
-  .then(data => setBlogs([data, ...blogs]));
+    .then((res) => res.json())
+    .then((data) => setBlogs([data, ...blogs]));
 };
 ```
 
 ## Routes
 
-| Path      |Component     |Description     |
-|-----------|---------------|----------------|
-| /blogs    | BlogLIst      |Homepage with all posts  |
-|/blogs/:id |BlogPost       |Individual post view     |
-|/new-post |NewPostForm   |Create post form         |
-| *         |Error         | 404 page                |
+| Path       | Component   | Description             |
+| ---------- | ----------- | ----------------------- |
+| /blogs     | BlogLIst    | Homepage with all posts |
+| /blogs/:id | BlogPost    | Individual post view    |
+| /new-post  | NewPostForm | Create post form        |
+| \*         | Error       | 404 page                |
 
 ## Contributing
 
