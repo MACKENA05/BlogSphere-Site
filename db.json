@@ -11,11 +11,20 @@
           "id": 1,
           "author": "Jane",
           "text": "Great article!"
-        },
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "image": "Images/2.png",
+      "title": "JavaScript ES6 Features You Should Know",
+      "author": "Mary Smith",
+      "content": "ES6 introduced a number of useful features such as arrow functions, promises, template literals, and more.",
+      "comments": [
         {
-          "id": 2,
-          "author": "kin ",
-          "text": "a boy"
+          "id": 1,
+          "author": "Paul",
+          "text": "Very helpful overview!"
         }
       ]
     },
@@ -270,6 +279,55 @@
           "text": "Bootstrap has made responsive design so easy!"
         }
       ]
+    },
+    {
+      "id": "7a7d",
+      "title": "bjhbdiu",
+      "content": "n cvksbc ",
+      "author": "jvck jbs ",
+      "image": "https://i.pinimg.com/236x/58/34/a0/5834a036d022c5e10a6f64f437fdd9bf.jpg"
+    },
+    {
+      "id": "625f",
+      "title": "Animations in Css",
+      "content": "There is a rising need in animation technology to better style the websites.",
+      "author": "Edith",
+      "image": "https://i.pinimg.com/236x/88/67/47/8867473fa1b28f1d394fb4ad88f81c16.jpg"
+    },
+    {
+      "id": "3735",
+      "title": "uiviov",
+      "content": "bkjvknv",
+      "author": " jhsbcuhinks",
+      "image": "image: e.target.value"
+    },
+    {
+      "id": "3da6",
+      "title": "bioksnc",
+      "content": "jcbsioknlc",
+      "author": "uibscnnoikc",
+      "image": "https://i.pinimg.com/236x/88/67/47/8867473fa1b28f1d394fb4ad88f81c16.jpg"
+    },
+    {
+      "id": "05ce",
+      "title": "making melody",
+      "content": "Is in my heart",
+      "author": "edith",
+      "image": "https://i.pinimg.com/474x/f6/c1/6e/f6c16ef702cba853a4e5408b2abb1c00.jpg"
+    },
+    {
+      "id": "d3da",
+      "title": "hbub",
+      "content": "bcink",
+      "author": "jbkns c",
+      "image": "https://i.pinimg.com/236x/c7/8b/cc/c78bcc89c051b3fb9be354a9399fcb1c.jpg"
+    },
+    {
+      "id": "ab1a",
+      "title": " hbjdn d",
+      "content": " vjnd vn",
+      "author": " jjdnkvfn",
+      "image": "https://i.pinimg.com/236x/92/3e/ee/923eeeee6a43d78843866ccdb9b8a893.jpg"
     }
   ]
 }
