@@ -6,8 +6,7 @@ import BlogPost from './Components/BlogPost';
 import NewPostForm from './Components/NewPostForm';
 import Footer from './Components/Footer';
 import Error from './Error';
-import { useEffect,useState } from'react';
-
+import { useEffect, useState } from 'react';
 
 function App() {
      const [blogs, setBlogs] = useState([]);
@@ -34,9 +33,9 @@ function App() {
         <Route path="/newpost" element={<NewPostForm addPost={handleNewBlogs} setBlogs={setBlogs}/>} />
         <Route path="*" element={<Error/>} />
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }
 
-export default App
+export default App;

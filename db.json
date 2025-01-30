@@ -11,11 +11,20 @@
           "id": 1,
           "author": "Jane",
           "text": "Great article!"
-        },
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "image": "Images/2.png",
+      "title": "JavaScript ES6 Features You Should Know",
+      "author": "Mary Smith",
+      "content": "ES6 introduced a number of useful features such as arrow functions, promises, template literals, and more.",
+      "comments": [
         {
-          "id": 2,
-          "author": "kin ",
-          "text": "a boy"
+          "id": 1,
+          "author": "Paul",
+          "text": "Very helpful overview!"
         }
       ]
     },
@@ -226,6 +235,11 @@
           "id": 1,
           "author": "Maya",
           "text": "This article helped me fix a CORS error in my project."
+        },
+        {
+          "id": 2,
+          "author": "Mary",
+          "text": "This has really helped me alot"
         }
       ]
     },
@@ -272,18 +286,12 @@
       ]
     },
     {
-      "id": "919e",
+      "id": "1139",
       "title": "Getting Started with Docker",
-      "content": "Docker is a tool that allows developers to easily deploy applications in containers. Learn how to use Docker to containerize your applications.\"",
+      "content": "Docker is a tool that allows developers to easily deploy applications in containers. Learn how to use Docker to containerize your applications.",
       "author": "Emily Dawson",
-      "image": "",
-      "comments": [
-        {
-          "id": 1,
-          "author": "Monicah Mackena",
-          "text": "Docker is a game changer for development workflows"
-        }
-      ]
+      "image": "https://www.google.com/imgres?q=docker%20image&imgurl=https%3A%2F%2Fblog.codewithdan.com%2Fwp-content%2Fuploads%2F2023%2F06%2FDocker-Logo.png&imgrefurl=https%3A%2F%2Fblog.codewithdan.com%2Fdocker-for-developers-understanding-the-core-concepts%2F&docid=YP2vGZCkye6XrM&tbnid=ttkJYDZPm98TKM&vet=12ahUKEwid-LrK2Z2LAxVV8rsIHZRIAWcQM3oECH8QAA..i&w=3840&h=2160&hcb=2&ved=2ahUKEwid-LrK2Z2LAxVV8rsIHZRIAWcQM3oECH8QAA",
+      "comments": []
     }
   ]
 }
