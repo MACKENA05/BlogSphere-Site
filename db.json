@@ -20,20 +20,6 @@
       ]
     },
     {
-      "id": "2",
-      "image": "Images/2.png",
-      "title": "JavaScript ES6 Features You Should Know",
-      "author": "Mary Smith",
-      "content": "ES6 introduced a number of useful features such as arrow functions, promises, template literals, and more.",
-      "comments": [
-        {
-          "id": 1,
-          "author": "Paul",
-          "text": "Very helpful overview!"
-        }
-      ]
-    },
-    {
       "id": "3",
       "image": "Images/3.png",
       "title": "CSS Grid vs Flexbox",
