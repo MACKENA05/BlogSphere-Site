@@ -1,70 +1,180 @@
-# Getting Started with Create React App
+# Blog Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack blog platform built with React and JSON Server, featuring CRUD operations, comments, and dynamic routing.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [API Endpoints](#api-endpoints)
+- [Data Structure](#data-structure)
+- [State Management](#state-management)
+- [Routes](#routes)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **View Blog List**  
+  Browse all posts with titles and excerpts
+- **Blog Post Details**  
+  Full content view with author info and comments
+- **Create New Posts**  
+  Rich text form for article creation
+- **Comment System**  
+  Add and view comments in real-time
+- **Post Management**  
+  Delete unwanted posts
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies
 
-### `npm test`
+- React 18
+- React Router 6
+- JSON Server (Mock REST API)
+- CSS Modules
+- HTML5 Semantic Markup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+1. Clone repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+   git clone https://github.com/yourusername/blog-platform.git
+   cd blog-platform
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+npm install react-router-dom
+npm install -g json-server
+```
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Start backend server (port 3001):
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+json-server --watch db.json --port 3001
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Start React app (port 3000):
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm start
+```
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+blog-platform/
+├── public/
+│   └── db.json
+├── src/
+│   ├── components/
+│   │   ├── NavBar.js
+│   │   ├── BlogList.js
+│   │   ├── BlogPost.js
+│   │   ├── NewPostForm.js
+│   │   └── CommentSection.js
+│   ├── App.js
+│   └── App.css
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## API Endpoints
 
-### Code Splitting
+| Endpoint   | Method | Description          |
+| ---------- | ------ | -------------------- |
+| /blogs     | GET    | Fetch all posts      |
+| /blogs     | POST   | Create new post      |
+| /blogs/:id | PATCH  | Update post comments |
+| /blogs/:id | DELETE | Remove post          |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Data Structure
 
-### Analyzing the Bundle Size
+```json
+{
+  "id": 1,
+  "title": "Learning React",
+  "author": "Jane Smith",
+  "content": "React is a JavaScript library...",
+  "comments": [
+    {
+      "id": 1,
+      "author": "Mark",
+      "text": "Very informative!"
+    }
+  ]
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## State Management
 
-### Making a Progressive Web App
+```javascript
+const [blogs, setBlogs] = useState([]);
+const [newPost, setNewPost] = useState({
+  title: "",
+  content: "",
+  author: "",
+  image: "",
+});
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+// Fetch Posts
+useEffect(() => {
+  fetch("http://localhost:3001/blogs")
+    .then((res) => res.json())
+    .then((data) => setBlogs(data));
+}, []);
 
-### Advanced Configuration
+// Add New Post
+const addPost = (post) => {
+  fetch("http://localhost:3001/blogs", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(post),
+  })
+    .then((res) => res.json())
+    .then((data) => setBlogs([data, ...blogs]));
+};
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Routes
 
-### Deployment
+| Path       | Component   | Description             |
+| ---------- | ----------- | ----------------------- |
+| /blogs     | BlogLIst    | Homepage with all posts |
+| /blogs/:id | BlogPost    | Individual post view    |
+| /new-post  | NewPostForm | Create post form        |
+| \*         | Error       | 404 page                |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing
 
-### `npm run build` fails to minify
+1. Fork the project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2. Create feature branch:
+
+```bash
+git checkout -b feature/amazing-feature
+```
+
+3. Commit changes:
+
+```bash
+git commit -m 'Add amazing feature'
+```
+
+4. Push to branch:
+
+```bash
+git push origin feature/amazing-feature
+```
+
+5. Open pull request
+
+## License
+
+This project is open source and available under the MIT License.

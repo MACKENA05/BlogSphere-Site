@@ -1,11 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 function Error(){
     return (
-        <div className='error'>
-            <h1>Error 404</h1>
-            <p>Page not found.</p>
-            <Link to="/">Go back to Viewing Blogs</Link>
+        <div>
+            <h2>Sorry!! Page not found</h2>
+            <Link to = "/blogs">View Blogs</Link>
         </div>
     )
 }
+
+export default Error
