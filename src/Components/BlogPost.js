@@ -16,11 +16,10 @@ const BlogPost = () => {
   if (!blog) return <p>Loading...</p>;
 
   return (
-    <>
-      <img src={blog.image} alt={blog.title} /> 
+    <> 
       <div className="blog-post-full">
         <div className="blog-post-image">
-          
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt={blog.title} />
         </div>
         <div className="blog-post-details">
           <h2>{blog.title}</h2>
