@@ -1,4 +1,4 @@
-# Blog Platform
+# BlogSphere
 
 A full-stack blog platform built with React and JSON Server, featuring CRUD operations, comments, and dynamic routing.
 

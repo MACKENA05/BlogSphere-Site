@@ -45,7 +45,7 @@ const BlogList = ({ blogs, setBlogs }) => {
 
   return (
     <>
-      <h1 className="landing-page-header">Latest News</h1>
+      <h1 className="landing-page-header">BlogSphere</h1>
       <p className="landing-page-text">
         Stay updated with the latest tech news. <br />
         Discover a world of ideas and insights with our latest blog posts,

@@ -9,7 +9,7 @@ const NavBar = () => {
     <nav className='navbar'>
       <img src={logo} alt='logo' className='nav-logo' />
       <div className='nav-links'>
-        <Link to='./blogs'>Blogs</Link>
+        <Link to='./blogs'>View Blogs</Link>
       </div>
       <Link to='./newpost'>
         <button className='add-post-btn'>Add Post</button>
