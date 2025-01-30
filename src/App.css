@@ -47,27 +47,33 @@ nav a:hover {
 
 nav button {
   background: linear-gradient(90deg, #E57a44, #8f69ef);
-  /* Gradient from left to right */
   color: #ffffff;
-  /* Text color */
   border: none;
-  /* No border */
   border-radius: 8px;
-  /* Rounded corners */
   padding: 10px 20px;
-  /* Padding for the button */
   font-size: 16px;
-  /* Font size */
   font-weight: bold;
-  /* Bold text */
   cursor: pointer;
-  /* Pointer cursor on hover */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow */
   transition: all 0.3s ease-in-out;
-  /* Smooth hover effect */
 
 
+}
+/* Blog List Header */
+.landing-page-header {
+  text-align: center;
+  font-size: 2.3rem;
+  color: black;
+  margin-bottom: 12px;
+  margin-top: 13px;
+}
+
+.landing-page-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 20px;
 }
 
 /* Blog List Styles */
@@ -150,17 +156,6 @@ nav button {
   transition: all 0.3s ease-in-out; 
   
 }
-.landing-page-header h1{
-  text-align: center;
-  margin-top: 13px;
-  margin-bottom: 12px;
-
-}
-.landing-page-text p{
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 /* General Container Styling */
 .blog-post-container {
   display: flex;
@@ -263,7 +258,7 @@ nav button {
 /* Add responsiveness for smaller screens */
 @media (max-width: 768px) {
   .blog-post-full {
-    flex-direction: column; /* Stack the image and content vertically */
+    flex-direction: column; 
     padding: 10px;
   }
 
@@ -278,6 +273,17 @@ nav button {
 
   .blog-post-content {
     font-size: 1rem;
+  }
+  .landing-page-header {
+    font-size: 2rem;
+  }
+
+  .landing-page-text {
+    font-size: 1rem;
+  }
+
+  .blog-card {
+    padding: 12px;
   }
 }
 
@@ -422,21 +428,3 @@ nav button {
 }
 
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  nav a {
-    margin: 0.5rem 0;
-  }
-
-  .blog-list,
-  .blog-post,
-  .add-post {
-    margin: 1rem;
-    padding: 1rem;
-  }
-}
