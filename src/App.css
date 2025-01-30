@@ -150,7 +150,16 @@ nav button {
   transition: all 0.3s ease-in-out; 
   
 }
+.landing-page-header h1{
+  text-align: center;
+  margin-top: 13px;
+  margin-bottom: 12px;
 
+}
+.landing-page-text p{
+  text-align: center;
+  margin-bottom: 20px;
+}
 
 /* General Container Styling */
 .blog-post-container {
