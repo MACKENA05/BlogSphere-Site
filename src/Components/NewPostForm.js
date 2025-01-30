@@ -24,7 +24,7 @@ const NewPostForm = ({addPost,setBlogs }) => {
         .then((newPost) => {
             setNewPost({ title: '', content: '', author: '', image: '' });
             addPost(newPost)
-            window.location.href = '/blogs';
+            window.location.href = '/';
 
         });
 };
